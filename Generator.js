@@ -99,7 +99,7 @@ module.exports = {
     });
 
     // Pluck just the name values
-    var modelAttributeNames = _.pluck(scope.modelAttributes, 'name');
+    var modelAttributeNames = _.map(scope.modelAttributes, 'name');
 
     // Add the optional model attribute names to the scope
     _.defaults(scope, {
